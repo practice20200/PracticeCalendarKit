@@ -1,5 +1,6 @@
 
 import UIKit
+import Elements
 import UserNotifications
 
 class ViewController: UIViewController {
@@ -10,21 +11,32 @@ class ViewController: UIViewController {
     lazy var tableView : UITableView = {
         let table = UITableView()
         table.backgroundColor = .blue
+        table.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        table.heightAnchor.constraint(equalToConstant: 200).isActive = true
         return table
+    }()
+    
+    lazy var stack : VStack = {
+        let stack = VStack()
+        stack.addArrangedSubview(tableView)
+        
+        return stack
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Reminder"
         view.backgroundColor = .white
-        view.addSubview(tableView)
+        view.addSubview(stack)
         
-//        NSLayoutConstraint.activate([
+        NSLayoutConstraint.activate([
 //            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
 //            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 //            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
 //            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-//        ])
+            stack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
         
         tableView.register(ViewControllerTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
