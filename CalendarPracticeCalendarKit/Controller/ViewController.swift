@@ -64,9 +64,32 @@ class ViewController: UIViewController {
     }
     
     @objc func testHandler(){
-        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { [weak self] success, error in
+            if success{
+                self?.scheduleTest()
+                
+            }else if let error = error{
+                print("Error: \(error.localizedDescription)")
+                
+            }
+        }
     }
 
+    func scheduleTest(){
+        let content = UNMutableNotificationContent()
+        content.title = "Test"
+        content.sound = .default
+        content.body = "Test Description"
+        
+        let targetDate = Date().addingTimeInterval(5)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false)
+        let request = UNNotificationRequest (identifier: "query", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { error in
+            if error != nil {
+                print("Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
+    }
 
 }
 
