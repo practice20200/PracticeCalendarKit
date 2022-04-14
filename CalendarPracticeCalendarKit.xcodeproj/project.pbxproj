@@ -15,6 +15,7 @@
 		B371DAD928079905002065C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B371DAD728079905002065C0 /* LaunchScreen.storyboard */; };
 		B371DAE128079B9E002065C0 /* MyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE028079B9E002065C0 /* MyReminder.swift */; };
 		B371DAE328079DA0002065C0 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */; };
+		B371DAE82807A0F0002065C0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE72807A0F0002065C0 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B371DADA28079905002065C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B371DAE028079B9E002065C0 /* MyReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReminder.swift; sourceTree = "<group>"; };
 		B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		B371DAE72807A0F0002065C0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B371DAD0280798FC002065C0 /* ViewController.swift */,
+				B371DAE72807A0F0002065C0 /* AddViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				B371DAD1280798FC002065C0 /* ViewController.swift in Sources */,
 				B371DACD280798FC002065C0 /* AppDelegate.swift in Sources */,
+				B371DAE82807A0F0002065C0 /* AddViewController.swift in Sources */,
 				B371DAE328079DA0002065C0 /* ViewControllerTableViewCell.swift in Sources */,
 				B371DACF280798FC002065C0 /* SceneDelegate.swift in Sources */,
 				B371DAE128079B9E002065C0 /* MyReminder.swift in Sources */,

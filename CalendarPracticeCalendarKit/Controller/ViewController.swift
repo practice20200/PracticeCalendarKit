@@ -18,8 +18,17 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
+        
+        let addBTN = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addHandler))
+        navigationItem.rightBarButtonItem = addBTN
+        
     }
 
+    
+    @objc func addHandler(){
+        let vc = AddViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 
 }
