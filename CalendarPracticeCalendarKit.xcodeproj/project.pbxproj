@@ -13,6 +13,8 @@
 		B371DAD4280798FC002065C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B371DAD2280798FC002065C0 /* Main.storyboard */; };
 		B371DAD628079905002065C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B371DAD528079905002065C0 /* Assets.xcassets */; };
 		B371DAD928079905002065C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B371DAD728079905002065C0 /* LaunchScreen.storyboard */; };
+		B371DAE128079B9E002065C0 /* MyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE028079B9E002065C0 /* MyReminder.swift */; };
+		B371DAE328079DA0002065C0 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B371DAD528079905002065C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B371DAD828079905002065C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B371DADA28079905002065C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B371DAE028079B9E002065C0 /* MyReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReminder.swift; sourceTree = "<group>"; };
+		B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		B371DACB280798FC002065C0 /* CalendarPracticeCalendarKit */ = {
 			isa = PBXGroup;
 			children = (
+				B371DAE628079DD7002065C0 /* ViewModel */,
+				B371DAE528079DC1002065C0 /* Model */,
+				B371DAE428079DA8002065C0 /* Controller */,
 				B371DACC280798FC002065C0 /* AppDelegate.swift */,
 				B371DACE280798FC002065C0 /* SceneDelegate.swift */,
-				B371DAD0280798FC002065C0 /* ViewController.swift */,
 				B371DAD2280798FC002065C0 /* Main.storyboard */,
 				B371DAD528079905002065C0 /* Assets.xcassets */,
 				B371DAD728079905002065C0 /* LaunchScreen.storyboard */,
 				B371DADA28079905002065C0 /* Info.plist */,
 			);
 			path = CalendarPracticeCalendarKit;
+			sourceTree = "<group>";
+		};
+		B371DAE428079DA8002065C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B371DAD0280798FC002065C0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B371DAE528079DC1002065C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B371DAE028079B9E002065C0 /* MyReminder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B371DAE628079DD7002065C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +170,9 @@
 			files = (
 				B371DAD1280798FC002065C0 /* ViewController.swift in Sources */,
 				B371DACD280798FC002065C0 /* AppDelegate.swift in Sources */,
+				B371DAE328079DA0002065C0 /* ViewControllerTableViewCell.swift in Sources */,
 				B371DACF280798FC002065C0 /* SceneDelegate.swift in Sources */,
+				B371DAE128079B9E002065C0 /* MyReminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
