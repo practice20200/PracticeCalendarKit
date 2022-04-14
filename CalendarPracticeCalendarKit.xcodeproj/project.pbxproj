@@ -16,6 +16,7 @@
 		B371DAE128079B9E002065C0 /* MyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE028079B9E002065C0 /* MyReminder.swift */; };
 		B371DAE328079DA0002065C0 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */; };
 		B371DAE82807A0F0002065C0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE72807A0F0002065C0 /* AddViewController.swift */; };
+		B371DAEB2807A261002065C0 /* Elements in Frameworks */ = {isa = PBXBuildFile; productRef = B371DAEA2807A261002065C0 /* Elements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B371DAEB2807A261002065C0 /* Elements in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +118,9 @@
 			dependencies = (
 			);
 			name = CalendarPracticeCalendarKit;
+			packageProductDependencies = (
+				B371DAEA2807A261002065C0 /* Elements */,
+			);
 			productName = CalendarPracticeCalendarKit;
 			productReference = B371DAC9280798FC002065C0 /* CalendarPracticeCalendarKit.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +149,9 @@
 				Base,
 			);
 			mainGroup = B371DAC0280798FC002065C0;
+			packageReferences = (
+				B371DAE92807A261002065C0 /* XCRemoteSwiftPackageReference "ElementKit" */,
+			);
 			productRefGroup = B371DACA280798FC002065C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -392,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B371DAE92807A261002065C0 /* XCRemoteSwiftPackageReference "ElementKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/practice20200/ElementKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B371DAEA2807A261002065C0 /* Elements */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B371DAE92807A261002065C0 /* XCRemoteSwiftPackageReference "ElementKit" */;
+			productName = Elements;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B371DAC1280798FC002065C0 /* Project object */;
 }

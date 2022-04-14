@@ -6,8 +6,24 @@
 //
 
 import UIKit
+import Elements
 
 class AddViewController: UIViewController {
+    
+    lazy var titleTF : BaseUITextField = {
+        let tf = BaseUITextField()
+        return tf
+    }()
+    
+    lazy var descriptionTF : BaseUITextField = {
+        let tf = BaseUITextField()
+        return tf
+    }()
+    
+    lazy var datePicker: UIDatePicker = {
+        let datepicker = UIDatePicker()
+        return datepicker
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
