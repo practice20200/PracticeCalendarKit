@@ -17,6 +17,7 @@
 		B371DAE328079DA0002065C0 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */; };
 		B371DAE82807A0F0002065C0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE72807A0F0002065C0 /* AddViewController.swift */; };
 		B371DAEB2807A261002065C0 /* Elements in Frameworks */ = {isa = PBXBuildFile; productRef = B371DAEA2807A261002065C0 /* Elements */; };
+		B3D03C8F2808BCE20038DE9C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D03C8E2808BCE20038DE9C /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B371DAE028079B9E002065C0 /* MyReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReminder.swift; sourceTree = "<group>"; };
 		B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 		B371DAE72807A0F0002065C0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		B3D03C8E2808BCE20038DE9C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				B371DAD0280798FC002065C0 /* ViewController.swift */,
 				B371DAE72807A0F0002065C0 /* AddViewController.swift */,
+				B3D03C8E2808BCE20038DE9C /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				B371DAE328079DA0002065C0 /* ViewControllerTableViewCell.swift in Sources */,
 				B371DACF280798FC002065C0 /* SceneDelegate.swift in Sources */,
 				B371DAE128079B9E002065C0 /* MyReminder.swift in Sources */,
+				B3D03C8F2808BCE20038DE9C /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

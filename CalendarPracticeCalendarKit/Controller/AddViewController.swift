@@ -10,6 +10,8 @@ import Elements
 
 class AddViewController: UIViewController {
     
+    public var completion: ((String, String, Date) -> Void)?
+    
     lazy var titleTF : BaseUITextField = {
         let tf = BaseUITextField()
         return tf
@@ -25,6 +27,8 @@ class AddViewController: UIViewController {
         return datepicker
     }()
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +38,10 @@ class AddViewController: UIViewController {
     
 
     @objc func saveHandler(){
-        
+        if let titleText = titleTF.text, !titleText.isEmpty,
+           let descriptionText = descriptionTF.text, !descriptionText.isEmpty {
+            let targetDate = datePicker.date
+        }
     }
     
 
