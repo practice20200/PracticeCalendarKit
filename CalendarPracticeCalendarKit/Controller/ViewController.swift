@@ -10,9 +10,9 @@ class ViewController: UIViewController {
     
     lazy var tableView : UITableView = {
         let table = UITableView()
-        table.backgroundColor = .blue
-        table.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        table.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        table.backgroundColor = .secondarySystemBackground
+//        table.widthAnchor.constraint(equalToConstant: 200).isActive = true
+//        table.heightAnchor.constraint(equalToConstant: 200).isActive = true
         return table
     }()
     
@@ -30,12 +30,12 @@ class ViewController: UIViewController {
         view.addSubview(stack)
         
         NSLayoutConstraint.activate([
-//            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-//            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-//            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-            stack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            stack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+//            stack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            stack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
         tableView.register(ViewControllerTableViewCell.self, forCellReuseIdentifier: "cell")
@@ -60,6 +60,17 @@ class ViewController: UIViewController {
     
     @objc func addHandler(){
         let vc = AddViewController()
+        vc.title = "New Notification"
+        vc.completion = { title, description, date in
+            DispatchQueue.main.async { [weak self] in
+                guard self != nil , let self = self else { return }
+                self.navigationController?.popViewController(animated: true)
+                let newItem = MyReminder(title: title, date: date, id: "id_\(title)")
+                self.data.append(newItem)
+                self.tableView.reloadData()
+                
+            }
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -77,9 +88,9 @@ class ViewController: UIViewController {
 
     func scheduleTest(){
         let content = UNMutableNotificationContent()
-        content.title = "Test"
+        content.title = title ?? ""
         content.sound = .default
-        content.body = "Test Description"
+        content.body = description
         
         let targetDate = Date().addingTimeInterval(5)
         let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: false)
@@ -91,6 +102,11 @@ class ViewController: UIViewController {
         }
     }
 
+    func formatterDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MM HH:mm"
+        return formatter.string(from: date)
+    }
 }
 
 extension ViewController : UITableViewDelegate {
@@ -105,6 +121,9 @@ extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewControllerTableViewCell
         let item = data[indexPath.row]
+        
+        let date = formatterDate(date: item.date)
+        cell.updateView(time: date, content: item.title)
         return cell
     }
     
