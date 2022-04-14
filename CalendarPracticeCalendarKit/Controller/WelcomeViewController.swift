@@ -17,6 +17,7 @@ class WelcomeViewController: UIViewController {
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.layer.cornerRadius = 25
         button.addTarget(self, action: #selector(tapHandler), for: .touchUpInside)
+
         return button
     }()
     
@@ -36,7 +37,8 @@ class WelcomeViewController: UIViewController {
 
     @objc func tapHandler(){
         let vc = ViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("tapped")
     }
     /*
     // MARK: - Navigation

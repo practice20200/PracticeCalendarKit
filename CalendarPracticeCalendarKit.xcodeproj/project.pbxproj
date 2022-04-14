@@ -10,7 +10,6 @@
 		B371DACD280798FC002065C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DACC280798FC002065C0 /* AppDelegate.swift */; };
 		B371DACF280798FC002065C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DACE280798FC002065C0 /* SceneDelegate.swift */; };
 		B371DAD1280798FC002065C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAD0280798FC002065C0 /* ViewController.swift */; };
-		B371DAD4280798FC002065C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B371DAD2280798FC002065C0 /* Main.storyboard */; };
 		B371DAD628079905002065C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B371DAD528079905002065C0 /* Assets.xcassets */; };
 		B371DAD928079905002065C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B371DAD728079905002065C0 /* LaunchScreen.storyboard */; };
 		B371DAE128079B9E002065C0 /* MyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371DAE028079B9E002065C0 /* MyReminder.swift */; };
@@ -25,7 +24,6 @@
 		B371DACC280798FC002065C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B371DACE280798FC002065C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B371DAD0280798FC002065C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B371DAD3280798FC002065C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B371DAD528079905002065C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B371DAD828079905002065C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B371DADA28079905002065C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 				B371DAE428079DA8002065C0 /* Controller */,
 				B371DACC280798FC002065C0 /* AppDelegate.swift */,
 				B371DACE280798FC002065C0 /* SceneDelegate.swift */,
-				B371DAD2280798FC002065C0 /* Main.storyboard */,
 				B371DAD528079905002065C0 /* Assets.xcassets */,
 				B371DAD728079905002065C0 /* LaunchScreen.storyboard */,
 				B371DADA28079905002065C0 /* Info.plist */,
@@ -171,7 +168,6 @@
 			files = (
 				B371DAD928079905002065C0 /* LaunchScreen.storyboard in Resources */,
 				B371DAD628079905002065C0 /* Assets.xcassets in Resources */,
-				B371DAD4280798FC002065C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B371DAD2280798FC002065C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B371DAD3280798FC002065C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B371DAD728079905002065C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,7 +327,7 @@
 				INFOPLIST_FILE = CalendarPracticeCalendarKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -366,7 +354,7 @@
 				INFOPLIST_FILE = CalendarPracticeCalendarKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
