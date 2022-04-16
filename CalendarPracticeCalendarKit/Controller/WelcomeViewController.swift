@@ -21,16 +21,35 @@ class WelcomeViewController: UIViewController {
         return button
     }()
     
+    lazy var eventBTN : BaseUIButton = {
+        let button = BaseUIButton()
+        button.backgroundColor = .blue
+        button.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.layer.cornerRadius = 25
+        button.addTarget(self, action: #selector(eventHandler), for: .touchUpInside)
+
+        return button
+    }()
+    
+    lazy var stack : VStack = {
+        let stack = VStack()
+        stack.addArrangedSubview(startBTN)
+        stack.addArrangedSubview(eventBTN)
+        stack.spacing = 10
+        return stack
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        view.addSubview(startBTN)
+        view.addSubview(stack)
         
         NSLayoutConstraint.activate([
-            startBTN.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            startBTN.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            stack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
     
@@ -40,14 +59,10 @@ class WelcomeViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
         print("tapped")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func eventHandler(){
+        let vc = EventKitViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("tapped")
     }
-    */
-
 }
