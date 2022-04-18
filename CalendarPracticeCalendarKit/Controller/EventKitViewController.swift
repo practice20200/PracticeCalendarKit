@@ -30,9 +30,7 @@ class EventKitViewController : UIViewController {
                     let newEvent = EKEventEditViewController()
                     newEvent.eventStore = store
                     self?.present(newEvent, animated: true)
-                    
-                    
-                    
+    
                     let vc = EKEventViewController()
                     vc.delegate = self
 //                    vc.event = nil
@@ -46,9 +44,8 @@ class EventKitViewController : UIViewController {
 
 extension EventKitViewController : EKEventViewDelegate{
     func eventViewController(_ controller: EKEventViewController, didCompleteWith action: EKEventViewAction) {
-        controller.dismiss(animated: true)
+        controller.dismiss(animated: true, completion: nil)
     }
-    
     
     
     
