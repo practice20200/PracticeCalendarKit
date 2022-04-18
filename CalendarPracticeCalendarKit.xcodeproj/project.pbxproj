@@ -72,13 +72,12 @@
 		B371DACB280798FC002065C0 /* CalendarPracticeCalendarKit */ = {
 			isa = PBXGroup;
 			children = (
-				B3CC7C41280D1BA900EA35F1 /* 91824-map-animation-lottie-italy.json */,
+				B3CC7C43280D1DD300EA35F1 /* Resources */,
 				B371DAE628079DD7002065C0 /* ViewModel */,
 				B371DAE528079DC1002065C0 /* Model */,
 				B371DAE428079DA8002065C0 /* Controller */,
 				B371DACC280798FC002065C0 /* AppDelegate.swift */,
 				B371DACE280798FC002065C0 /* SceneDelegate.swift */,
-				B371DAD528079905002065C0 /* Assets.xcassets */,
 				B371DAD728079905002065C0 /* LaunchScreen.storyboard */,
 				B371DADA28079905002065C0 /* Info.plist */,
 			);
@@ -111,6 +110,15 @@
 				B371DAE228079DA0002065C0 /* ViewControllerTableViewCell.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B3CC7C43280D1DD300EA35F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B371DAD528079905002065C0 /* Assets.xcassets */,
+				B3CC7C41280D1BA900EA35F1 /* 91824-map-animation-lottie-italy.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
