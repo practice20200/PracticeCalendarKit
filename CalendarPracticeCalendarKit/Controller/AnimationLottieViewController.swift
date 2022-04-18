@@ -6,24 +6,28 @@
 //
 
 import UIKit
+import Lottie
+
 
 class AnimationLottieViewController: UIViewController {
+    
+    let animation = AnimationView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .green
+        animationPlay()
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func animationPlay(){
+        animation.frame = view.bounds
+        animation.contentMode = .scaleAspectFit
+        animation.loopMode = .loop
+        animation.animation = Animation.named("91824-map-animation-lottie-italy")
+        animation.play()
+        view.addSubview(animation)
     }
-    */
+   
 
 }
